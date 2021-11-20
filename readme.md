@@ -4,7 +4,6 @@
 ### What this is?
 It is python script that checks what does mayk's cafeteria have in menu and print's it to your terminal.
 
-
 ### How to use?
 You need to just download the ```ruoka``` and put it in your $PATH. 
 
@@ -19,5 +18,10 @@ You need to just download the ```ruoka``` and put it in your $PATH.
 ### How it works?
 It just gets the www.mayk.fi/tietoa-meista/ruokailu like ```curl``` and parses it with regex and styles it.
 
+---
+
 ### Photos
 ![image](https://user-images.githubusercontent.com/78662938/142719948-c03b7a53-4547-41ec-b7fe-35845e66b187.png)
+
+### Contact info
+Found in [Carrot8](https://github.com/carrot8) GitHub profile.
