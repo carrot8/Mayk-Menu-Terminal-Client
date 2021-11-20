@@ -5,7 +5,7 @@ V.ALPHA-0.1
 It is python script that checks what does mayk's cafeteria have in menu and print's it to your terminal.
 
 ### How to use?
-You need to just download the ```ruoka``` and put it in your $PATH. 
+You need to just download the ```ruoka``` and put it in your `$PATH`. 
 
 #### Tutorial
 0. You need to have python installed.
