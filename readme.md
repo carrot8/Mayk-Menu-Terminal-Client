@@ -1,4 +1,4 @@
-## MAYK TERMINAL CLIENT FOR LINUX)
+## MAYK TERMINAL CLIENT FOR LINUX
 
 
 ### What this is?
@@ -9,6 +9,7 @@ It is python script that checks what does mayk's cafeteria have in menu and prin
 You need to just download the ```ruoka``` and put it in your $PATH. 
 
 #### Tutorial
+0. You need to have python installed.
 1. ```git clone https://github.com/carrot8/Mayk-Terminal-Client.git```
 2. Optional: ```mv ruoka whatUwantToCallIt```
 3. Optional: use your favorite text editor to change the VEGAN value to show only the vegan/meat food.
