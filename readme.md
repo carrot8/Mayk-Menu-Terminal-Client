@@ -21,10 +21,8 @@ You need to just download the ```ruoka``` and put it in your `$PATH`.
 It just gets the www.mayk.fi/tietoa-meista/ruokailu like ```curl``` and parses it with regex and styles it.
 
 ---
-
 ### Photos
 ![image](https://user-images.githubusercontent.com/78662938/142723558-64d327cb-ad29-4e7e-b5f9-43f3b5b13592.png)
-
 
 ### Contact info
 Found in [Carrot8](https://github.com/carrot8) GitHub profile.
