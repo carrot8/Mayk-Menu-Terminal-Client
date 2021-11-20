@@ -39,8 +39,9 @@ rpd = rp.read()
    
 p = re.findall(r'<p class=\"ruoka-header-(ruoka|kasvisruoka)\">([^<]*)<',str(rpd))
    
-for f in p:
-    if i % 2 == 0:
+for c in p:
+   f = c[1:]
+   if i % 2 == 0:
         print(Fore.CYAN + days[i])
         if VEGAN == False or VEGAN == None:
             ft = Fore.WHITE + "Norm: "
@@ -51,7 +52,7 @@ for f in p:
             ft = Fore.GREEN + "Vege: "
             print(ft, f)
     
-    i = i + 1
+    i += 1
     if i % 2 == 0:
         print("")
         
