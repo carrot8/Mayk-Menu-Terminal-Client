@@ -21,7 +21,8 @@ It just gets the www.mayk.fi/tietoa-meista/ruokailu like ```curl``` and parses i
 ---
 
 ### Photos
-![image](https://user-images.githubusercontent.com/78662938/142719948-c03b7a53-4547-41ec-b7fe-35845e66b187.png)
+![image](https://user-images.githubusercontent.com/78662938/142720951-9cf29121-347c-416e-b3aa-e10cda492261.png)
+
 
 ### Contact info
 Found in [Carrot8](https://github.com/carrot8) GitHub profile.
