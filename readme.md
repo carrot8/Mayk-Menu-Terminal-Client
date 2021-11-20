@@ -1,5 +1,5 @@
 ## MAYK TERMINAL CLIENT FOR LINUX
-
+V.ALPHA-0.1
 
 ### What this is?
 It is python script that checks what does mayk's cafeteria have in menu and print's it to your terminal.
