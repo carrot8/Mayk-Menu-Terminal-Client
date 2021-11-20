@@ -23,7 +23,7 @@ It just gets the www.mayk.fi/tietoa-meista/ruokailu like ```curl``` and parses i
 ---
 
 ### Photos
-![image](https://user-images.githubusercontent.com/78662938/142720951-9cf29121-347c-416e-b3aa-e10cda492261.png)
+![image](https://user-images.githubusercontent.com/78662938/142723558-64d327cb-ad29-4e7e-b5f9-43f3b5b13592.png)
 
 
 ### Contact info
