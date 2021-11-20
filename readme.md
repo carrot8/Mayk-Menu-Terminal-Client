@@ -9,11 +9,13 @@ You need to just download the ```ruoka``` and put it in your `$PATH`.
 
 #### Tutorial
 0. You need to have python installed.
-1. ```git clone https://github.com/carrot8/Mayk-Terminal-Client.git```
-2. Optional: ```mv ruoka whatUwantToCallIt```
-3. Optional: use your favorite text editor to change the VEGAN value to show only the vegan/meat food.
-4. ```mv ruoka /usr/bin/```
-5. Just run ```ruoka``` in  your terminal
+1. ```git clone https://github.com/carrot8/Mayk-Menu-Terminal-Client.git```
+2. ```cd Mayk-Menu-Terminal-Client```
+3. ```chmod +x ruoka```
+4. Optional: ```mv ruoka whatUwantToCallIt```
+5. Optional: use your favorite text editor to change the VEGAN value to show only the vegan/meat food.
+6. ```mv ruoka /usr/bin/```
+7. Just run ```ruoka``` in  your terminal
 
 ### How it works?
 It just gets the www.mayk.fi/tietoa-meista/ruokailu like ```curl``` and parses it with regex and styles it.
