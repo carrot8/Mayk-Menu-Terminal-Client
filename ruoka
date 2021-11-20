@@ -1,0 +1,58 @@
+#! /usr/bin/python
+
+import urllib.request
+import urllib.parse
+import re
+from colorama import Fore, Style
+
+#####   MAYK RUOKALISTA TERMINAL CLIENT     #####
+
+##configs
+
+#Set True if you want to see only the vegan food.
+#Set False if you dont want to see the vegan food.
+#Set None if you want to see both.
+VEGAN = None;
+
+
+
+print(Style.BRIGHT)
+
+url = 'https://www.mayk.fi/tietoa-meista/ruokailu'
+days = ["Maanantai:     ", 
+        "MaVeg: ", 
+        "Tiistai:       ", 
+        "TiVeg: ", 
+        "Keskiviikko:   ", 
+        "KeVeg: ", 
+        "Torstai::      ", 
+        "ToVeg: ", 
+        "Perjantai:     ", 
+        "PeVeg: "] 
+i = 0
+m = 1
+ft = ""
+
+r = urllib.request.Request(url)
+rp = urllib.request.urlopen(r)
+rpd = rp.read()
+   
+p = re.findall(r'<p class=\"ruoka-header-(ruoka|kasvisruoka)\">([^<]*)<',str(rpd))
+   
+for f in p:
+    if i % 2 == 0:
+        print(Fore.CYAN + days[i])
+        if VEGAN == False or VEGAN == None:
+            ft = Fore.WHITE + "Norm: "
+            print(ft, f)
+
+    if VEGAN == True or VEGAN == None:
+        if i % 2 == 1:
+            ft = Fore.GREEN + "Vege: "
+            print(ft, f)
+    
+    i = i + 1
+    if i % 2 == 0:
+        print("")
+        
+print(Style.RESET_ALL)
