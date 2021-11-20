@@ -19,16 +19,16 @@ VEGAN = None;
 print(Style.BRIGHT)
 
 url = 'https://www.mayk.fi/tietoa-meista/ruokailu'
-days = ["Maanantai:     ", 
-        "MaVeg: ", 
-        "Tiistai:       ", 
-        "TiVeg: ", 
-        "Keskiviikko:   ", 
-        "KeVeg: ", 
-        "Torstai::      ", 
-        "ToVeg: ", 
-        "Perjantai:     ", 
-        "PeVeg: "] 
+days = ["Maanantai:     ",
+        "MaVeg: ",
+        "Tiistai:       ",
+        "TiVeg: ",
+        "Keskiviikko:   ",
+        "KeVeg: ",
+        "Torstai::      ",
+        "ToVeg: ",
+        "Perjantai:     ",
+        "PeVeg: "]
 i = 0
 m = 1
 ft = ""
@@ -36,12 +36,12 @@ ft = ""
 r = urllib.request.Request(url)
 rp = urllib.request.urlopen(r)
 rpd = rp.read()
-   
+
 p = re.findall(r'<p class=\"ruoka-header-(ruoka|kasvisruoka)\">([^<]*)<',str(rpd))
-   
+
 for c in p:
-   f = c[1:]
-   if i % 2 == 0:
+    f = c[1:]
+    if i % 2 == 0:
         print(Fore.CYAN + days[i])
         if VEGAN == False or VEGAN == None:
             ft = Fore.WHITE + "Norm: "
@@ -51,9 +51,9 @@ for c in p:
         if i % 2 == 1:
             ft = Fore.GREEN + "Vege: "
             print(ft, f)
-    
+
     i += 1
     if i % 2 == 0:
         print("")
-        
+
 print(Style.RESET_ALL)
