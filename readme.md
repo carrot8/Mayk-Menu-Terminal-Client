@@ -11,7 +11,7 @@ then run `ruoka --help` to get info on the program
 
 #### Installation (for linux)
 0. ```apt install python3``` (if you don't already have python3 installed)
-1. ```git clone https://github.com/carrot8/Mayk-Menu-Terminal-Client```
+1. ```git clone https://github.com/openMayk/Mayk-Menu-Terminal-Client```
 2. ```cd Mayk-Menu-Terminal-Client```
 3. ```chmod +x ruoka```
 4. Optional: ```mv ruoka whatUwantToCallIt```
