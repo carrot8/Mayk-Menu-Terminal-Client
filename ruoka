@@ -1,20 +1,38 @@
-#! /usr/bin/python
+# /usr/bin/python
 
 import urllib.request
 import urllib.parse
 import re
+from sys import argv
 from colorama import Fore, Style
 
-#####   MAYK RUOKALISTA TERMINAL CLIENT     #####
 
-##configs
+def getVegan():
+	print(Fore.RED)
+	for arg in argv[1:]:
+		if arg.startswith("--vegan"):
+			vsplit = arg.split('=')
+			if len(vsplit) == 1:
+				print("vegan set to default value because of no argument given with --vegan. please give either true or false as an argument")
+				quit(1)
+			else:
+				if vsplit[1].lower() == "true":
+					return True
+				elif vsplit[1].lower() == "false":
+					return False
+				else:
+					print(f"illegal argument {vsplit[1]} given to --vegan. please only use true or false as arguments")
+					quit(1)
+		elif arg in ["--help", "-h"]:
+			print("""#	usage: ruoka [command]
+#
+#	--vegan=VEGAN		Use true if you only want to see the vegan menu. Use false if you only want to see normal menu. Don't use if you want to see both
+#	-h --help			Get help on the commands and flags""")
+			quit()
+		
+print(Style.RESET_ALL)			
 
-#Set True if you want to see only the vegan food.
-#Set False if you dont want to see the vegan food.
-#Set None if you want to see both.
-VEGAN = None;
-
-
+VEGAN = getVegan();
 
 print(Style.BRIGHT)
 
@@ -29,31 +47,27 @@ days = ["Maanantai:     ",
         "ToVeg: ",
         "Perjantai:     ",
         "PeVeg: "]
-i = 0
-m = 1
 ft = ""
 
+print("Getting food menu...")
 r = urllib.request.Request(url)
 rp = urllib.request.urlopen(r)
 rpd = rp.read()
 
-p = re.findall(r'<p class=\"ruoka-header-(ruoka|kasvisruoka)\">([^<]*)<',str(rpd))
+menu = re.findall(r'<p class=\"ruoka-header-(ruoka|kasvisruoka)\">([^<]*)<',str(rpd))
 
-for c in p:
-    f = c[1:]
-    if i % 2 == 0:
-        print(Fore.CYAN + days[i])
-        if VEGAN == False or VEGAN == None:
-            ft = Fore.WHITE + "Norm: "
-            print(ft, f)
-
-    if VEGAN == True or VEGAN == None:
-        if i % 2 == 1:
-            ft = Fore.GREEN + "Vege: "
-            print(ft, f)
-
-    i += 1
-    if i % 2 == 0:
-        print("")
-
+for i, foods in enumerate(menu):
+	f = ",".join(foods[1:]).replace("\\xc3\\xb6", 'ö').replace("\\xc3\\xa4", 'ä')
+	if i % 2 == 0:
+		print(Fore.CYAN + days[i])
+		if not VEGAN:
+			ft = Fore.WHITE + "Norm: "
+			print(ft, f)
+	
+	else:
+		if VEGAN is True or VEGAN is None:
+			ft = Fore.GREEN + "Vege: "
+			print(ft, f)
+			print()
+   
 print(Style.RESET_ALL)
