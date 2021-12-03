@@ -66,7 +66,7 @@ mv ruoka /usr/bin/
 3. `chmod +x ruoka.py`
 4. Run `python -m pip install colorama` to install colorama
 5. Run `python ruoka.py`
-6. You're ready to go! If you have any problems, feel free to contact [theZeriax](https://github.com/theZeriax)!
+6. You're ready to go! If you have any problems, feel free to contact me!
 
 ##### Copy (Windows)
 
