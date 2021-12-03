@@ -30,14 +30,6 @@ Just run `git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client.git; 
 
 `sudo rpm -i python`
 
-#### Windows (if you don't have Python installed)
-
-1. Download the python installer from [python.org/downloads/](https://www.python.org/downloads/)
-2. Install it
-3. Run `python -m ensurepip`
-4. Run `python -m pip install colorama`
-5. You should now have python installed and you can continue with the rest of the installation!
-
 ### Installation
 
 #### Linux
@@ -52,30 +44,7 @@ Just run `git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client.git; 
 ##### Copy (Linux)
 
 ```shell
-git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client
-cd Mayk-Menu-Terminal-Client
-chmod +x ruoka
-mv ruoka /usr/bin/
-```
-
-#### Windows
-
-0. Have python installed, please check the above guide for how to install python.
-1. `git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client`
-2. `cd Mayk-Menu-Terminal-Client`
-3. `chmod +x ruoka.py`
-4. Run `python -m pip install colorama` to install colorama
-5. Run `python ruoka.py`
-6. You're ready to go! If you have any problems, feel free to contact me!
-
-##### Copy (Windows)
-
-```shell
-git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client
-cd Mayk-Menu-Terminal-Client
-chmod +x ruoka.py
-python -m pip install colorama
-python ruoka.py
+git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client; cd Mayk-Menu-Terminal-Client; chmod +x ruoka; mv ruoka /usr/bin/
 ```
 
 #### Crazies (Termux)
@@ -98,5 +67,4 @@ python ruoka.py
 ## Contact
 
 Made by [Carrot8](https://github.com/carrot8)
-README.md edited by [theZeriax](https://github.com/theZeriax)
 
