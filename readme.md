@@ -66,5 +66,7 @@ git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client; cd Mayk-Menu-T
 
 ## Contact
 
-Made by [Carrot8](https://github.com/carrot8)
+Please free to contact [Carrot8](https://github.com/carrot8)
 
+### Maintainers:
+[Carrot8](https://github.com/carrot8), [unityH24](https://github.com/unityH24)
