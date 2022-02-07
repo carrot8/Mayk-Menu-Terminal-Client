@@ -12,6 +12,7 @@ def usage(program):
     print(f"""usage: {program} [FLAGS]
     -V          show vegan food options
     -h --help   show this menu and exit
+    -p          print the source code
     """)
     exit(0)
 
@@ -24,6 +25,9 @@ def parse_args():
         opt = argv[i]
         if opt == "-V":
             vegan = True
+        elif opt == "-p":
+            print(open(__file__).read())
+            exit(0)
         elif opt == "--help" or opt == "-h":
             usage(argv[0])
         else:
@@ -31,10 +35,11 @@ def parse_args():
         i += 1
     return vegan
 
+vegan = parse_args()
+
 print("Getting food menu...")
 
 menu = re.findall(r'<p class=\"ruoka-header-(ruoka|kasvisruoka)\">([^<]*)<',str(urllib.request.urlopen(urllib.request.Request('https://www.mayk.fi/tietoa-meista/ruokailu')).read()))
-vegan = parse_args()
 
 days = ["ma", "ti", "ke", "to", "pe"]
 
