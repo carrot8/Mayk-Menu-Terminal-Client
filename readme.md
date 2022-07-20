@@ -38,7 +38,7 @@ Just run `git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client.git; 
 1. `git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client` Clone the repo
 2. `cd Mayk-Menu-Terminal-Client` Change dir to the cloned repo
 3. `chmod +x ruoka` Give executable permissions for the program
-4. `mv ruoka /usr/bin/` Move the program to bin
+4. `sudo mv ruoka /usr/bin/` Move the program to bin
 5. If any problems just feel free to contact me!
 
 ##### Copy (Linux)
@@ -50,10 +50,10 @@ git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client; cd Mayk-Menu-T
 #### Crazies (Termux)
 
 0. Install python: `pkg i python`
-1. `git clone <https://github.com/libreMayk/Mayk-Menu-Terminal-Client>`
+1. `git clone https://github.com/libreMayk/Mayk-Menu-Terminal-Client`
 2. `cd Mayk-Menu-Terminal-Client`
 3. Use your favorite text editor to change the `#! /usr/bin/python` to `#! /data/data/com.termux/files/usr/bin/python`
-4. Then you will need to use that editor again to add the RUOKA to your path `vim ~/.bashrc` then add `export PATH=$PATH:~/Mayk-Menu-Terminal-Client/ruoka` to the end
+4. Then you will need to use that editor again to add `ruoka` to your PATH `vim ~/.bashrc` then add `export PATH=$PATH:~/Mayk-Menu-Terminal-Client/ruoka` to the end
 5. Now you can just run `ruoka --help`
 6. If any problems feel free to contact me!
 
