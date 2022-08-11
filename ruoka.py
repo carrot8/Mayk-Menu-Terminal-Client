@@ -46,7 +46,7 @@ days = ["ma", "ti", "ke", "to", "pe"]
 for i, foods in enumerate(menu):
     f = ",".join(foods[1:]).replace("\\xc3\\xb6", 'ö').replace("\\xc3\\xa4", 'ä')
     if i % 2 == 0:
-        print(Fore.CYAN + days[i // 2])
+        print(Fore.CYAN + days[len(days) - len(foods) + (i // 2)])
         ft = Fore.WHITE + "Norm: "
         print(ft, f)
         if not vegan:
